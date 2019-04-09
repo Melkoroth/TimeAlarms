@@ -111,7 +111,7 @@ void TimeAlarmsClass::disable(AlarmID_t ID)
   }
 }
 
-bool TimeAlarmsClass::isEnabled(AlarmID_t ID)
+bool TimeAlarmsClass::isEnabled(AlarmID_t ID) const
 {
   if (isAllocated(ID)) {
     return Alarm[ID].Mode.isEnabled;
