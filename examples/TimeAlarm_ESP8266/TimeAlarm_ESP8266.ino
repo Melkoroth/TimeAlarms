@@ -18,7 +18,7 @@
  */
 
 #define YOUR_WIFI_SSID "Your_SSID"
-#define YOUR_WIFI_SSID "Your_Pw"
+#define YOUR_WIFI_PWD "Your_PWD"
 
 #include <TimeLib.h>
 #include <NtpClientLib.h>

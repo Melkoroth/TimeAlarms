@@ -155,6 +155,7 @@ public:
   // low level methods
   void enable(AlarmID_t ID);                // enable the alarm to trigger
   void disable(AlarmID_t ID);               // prevent the alarm from triggering
+  bool isEnabled(AlarmID_t ID) const;             // returns whether the alarm is enabled or not
   AlarmID_t getTriggeredAlarmId() const;          // returns the currently triggered  alarm id
   bool getIsServicing() const;                    // returns isServicing
   void write(AlarmID_t ID, time_t value);   // write the value (and enable) the alarm with the given ID

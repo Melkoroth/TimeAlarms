@@ -50,9 +50,9 @@ This sketch  triggers daily alarms at 8:30 am and 17:45 pm.
 A Timer is triggered every 15 seconds, another timer triggers once only after 10 seconds.
 A weekly alarm is triggered every Sunday at 8:30:30
 
-```
-\#include <Time.h>
-\#include <TimeAlarms.h>
+```cpp
+#include <Time.h>
+#include <TimeAlarms.h>
 
 void setup()
 {
@@ -195,8 +195,7 @@ by Alexander Brevig may be more suitable, see: http://www.arduino.cc/playground/
 
 Q: How are scheduled tasks affected if the system time is changed?
 A: Tasks are scheduled for specific times designated by the system clock.
-If the system time is reset to a later time (for example one hour ahead) then all
-alarms and timers will occur one hour later.
+If the system time is reset to a later time (for example one hour ahead) then all alarms and timers will occur one hour later.
 If the system time is set backwards (for example one hour back) then the alarms and timers will occur an hour earlier.
 If the time is reset before the time a task was scheduled, then the task will be triggered on the next service (the next call to `Alarm.delay`).
 This is  the expected behaviour for Alarms � tasks scheduled for a specific time of day will trigger at that time, but the affect on timers may not be intuitive. If a timer is scheduled to trigger in 5 minutes time and the clock is set ahead by one hour, that timer will not trigger until one hour and 5 minutes has elapsed.
